@@ -1,17 +1,30 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true
+      }
+    }
+  }
+  return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  0(n^2)
 */
 
 /* 
-  Add your pseudocode here
+iterate through array 
+iterate through array adding each value to target
+checks sums of each value to see if equal to target
 */
 
 /*
-  Add written explanation of your solution here
+Takes an interger (target) from the number array
+Functions iterates through the array individually checking the sum of the interger (target) plus each of the remaining values of array
+Function checks to see if sum matches target; returns true if it does
+Returns false otherwise
 */
 
 // You can run `node index.js` to view these console logs
